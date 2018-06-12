@@ -14,32 +14,12 @@ def pop_with_args(array)
   array.pop(2)
 end
 
-describe "#pop_with_args" do
-  before(:each) do 
-    @chars_in_game_of_thrones = ["Danny T.", "Tyrion Lannister", "Stable Boy", "Sandor Clegane, aka The Mountain"]
-    @chars_arya_killed = pop_with_args(@chars_in_game_of_thrones)
-  end 
-  it "takes in an argument of an array and uses the pop method with an argument of 2 to remove the last two array items and return them" do 
-    expect(@chars_arya_killed).to eq(["Stable Boy", "Sandor Clegane, aka The Mountain"])
-  end 
-
-  it "decreases the length of the array by 2" do
-    expect(@chars_in_game_of_thrones.size).to eq(2) 
-  end
+def using_shift(array)
+  array.shift
 end
 
-describe "#using_shift" do 
-  before(:each) do 
-    @my_favorite_cities = ["Lagos", "Cape Town", "Nairobi", "San Francisco", "Gaborone", "New York", "Berlin", "London"]
-    @im_so_over_this_city = using_shift(@my_favorite_cities)
-  end
-  it "takes in an argument of an array and uses the shift method to remove the first item and return it" do 
-    expect(@im_so_over_this_city).to eq("Lagos")
-  end
-
-  it "decreases the length of the array by 1" do 
-    expect(@my_favorite_cities.size).to eq(7)
-  end
+def shift_with_args(array)
+  array.shift(2)
 end
 
 describe "#shift_with_args" do 
